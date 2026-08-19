@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mystberry</title>
-    <meta name="description" content="Mystberry">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Mystberry</h1>
+    <!-- Hero Section with Video/Image Background -->
+    <header class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/videos/hero-video.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to Mystberry</h1>
+            <p>Your custom site, now hosted on GitHub Pages.</p>
+        </div>
     </header>
 
-    <main>
-        <p>Welcome to Mystberry!</p>
+    <!-- Main Content Section -->
+    <main class="content">
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="image-grid">
+                <img src="assets/images/background.jpg" alt="Mystberry Visual">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Mystberry. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
