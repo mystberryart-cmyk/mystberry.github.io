@@ -35,12 +35,12 @@ header {
 .logo-img {
   height: 35px;
   width: auto;
-  transform: rotate(-10deg); /* Tilts the berry logo slightly towards the text */
+  transform: rotate(25deg); /* Tilts the berry logo nicely toward the text */
   transition: transform 0.3s ease;
 }
 
 .logo-container:hover .logo-img {
-  transform: rotate(0deg) scale(1.05); /* Adds a playful straighten & pop effect on hover! */
+  transform: rotate(0deg) scale(1.05); /* Straightens up and pops on hover */
 }
 
 .logo-text {
