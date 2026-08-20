@@ -43,14 +43,13 @@ header {
   transition: transform 0.3s ease;
 }
 
-@keyframes logoWobble {
-  0% { transform: rotate(25deg); }
-  15% { transform: rotate(30deg); } /* +5 deg wobble */
-  30% { transform: rotate(20deg); } /* -5 deg wobble */
-  45% { transform: rotate(27deg); }
-  60% { transform: rotate(23deg); }
-  75% { transform: rotate(26deg); }
-  100% { transform: rotate(25deg); }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.logo {
+  animation: float 4s ease-in-out infinite;
 }
 
 .logo-container:hover .logo-img {
