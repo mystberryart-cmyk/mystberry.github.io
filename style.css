@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #0d131f; /* Matches your Squarespace dark theme */
+  background-color: #0d131f;
   color: #ffffff;
 }
 
@@ -29,31 +29,26 @@ header {
   align-items: center;
   text-decoration: none;
   color: #fff;
-  gap: 4px; /* Spacing between logo and text */
+  gap: 4px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(25deg); }
+  50% { transform: translateY(-6px) rotate(25deg); }
 }
 
 .logo-img {
   height: 38px;
   width: auto;
   position: relative;
-  top: -4px; /* Optically lifts the logo slightly higher than the text */
-  transform: rotate(25deg); /* Leans 25 degrees towards the text */
-  transform-origin: bottom center; /* Wobbles naturally from its base */
-  animation: logoWobble 1.2s ease-in-out; /* Plays on page load */
+  top: -4px;
+  transform-origin: bottom center;
+  animation: float 4s ease-in-out infinite;
   transition: transform 0.3s ease;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.logo {
-  animation: float 4s ease-in-out infinite;
-}
-
 .logo-container:hover .logo-img {
-  transform: rotate(25deg) scale(1.05); /* Maintains the tilt and pops slightly on hover */
+  transform: translateY(0) rotate(25deg) scale(1.05);
 }
 
 .logo-text {
@@ -89,7 +84,7 @@ header nav a:hover, header nav a.active {
 .hero-banner {
   position: relative;
   height: 75vh;
-  background-color: #0d131f; /* Fills empty side space with your dark theme color */
+  background-color: #0d131f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,22 +99,20 @@ header nav a:hover, header nav a.active {
   width: 100%;
   height: 100%;
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
   background-color: #0d131f;
 }
 
 #hero-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This makes the video fill the box and crops out the bars */
+  object-fit: cover; /* Stretches and zooms the video to fill the screen completely and eliminate black bars */
 }
 
 .hero-box {
   position: relative;
-  z-index: 1; /* Keeps your text box floating cleanly on top of the video */
-  background: rgba(15, 23, 42, 0.75); /* Dark translucent navy box */
+  z-index: 1;
+  background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 40px;
@@ -166,7 +159,7 @@ header nav a:hover, header nav a.active {
   color: #0d131f;
 }
 
-/* Gallery Grid (Titles Below Images) */
+/* Gallery Grid */
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
