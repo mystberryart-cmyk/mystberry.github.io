@@ -32,9 +32,12 @@ header {
   gap: 4px;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(25deg); }
-  50% { transform: translateY(-6px) rotate(25deg); }
+/* Fun, prominent wobble/tilt animation on page load */
+@keyframes logoWobble {
+  0% { transform: rotate(0deg) scale(0.9); }
+  30% { transform: rotate(32deg) scale(1.05); }
+  60% { transform: rotate(20deg) scale(0.98); }
+  100% { transform: rotate(25deg) scale(1); }
 }
 
 .logo-img {
@@ -43,12 +46,13 @@ header {
   position: relative;
   top: -4px;
   transform-origin: bottom center;
-  animation: float 4s ease-in-out infinite;
+  transform: rotate(25deg); /* Keeps your 25-degree default lean towards the text */
+  animation: logoWobble 1.2s ease-in-out;
   transition: transform 0.3s ease;
 }
 
 .logo-container:hover .logo-img {
-  transform: translateY(0) rotate(25deg) scale(1.05);
+  transform: rotate(25deg) scale(1.08); /* Pops nicely on hover */
 }
 
 .logo-text {
@@ -106,7 +110,7 @@ header nav a:hover, header nav a.active {
 #hero-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Stretches and zooms the video to fill the screen completely and eliminate black bars */
+  object-fit: cover; /* Eliminates the black top/bottom bars */
 }
 
 .hero-box {
