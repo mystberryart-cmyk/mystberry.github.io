@@ -29,12 +29,14 @@ header {
   align-items: center;
   text-decoration: none;
   color: #fff;
-  gap: 4px; /* Decreased spacing between the logo image and text */
+  gap: 4px; /* Spacing between logo and text */
 }
 
 .logo-img {
   height: 35px;
   width: auto;
+  position: relative;
+  top: -3px; /* Optically lifts the logo slightly higher than the text */
   transform: rotate(25deg); /* Leans 25 degrees towards the text */
   transform-origin: bottom center; /* Wobbles naturally from its base */
   animation: logoWobble 1.2s ease-in-out; /* Plays on page load */
@@ -52,7 +54,7 @@ header {
 }
 
 .logo-container:hover .logo-img {
-  transform: rotate(25deg) scale(1.05); /* Maintains the 25deg tilt and pops slightly on hover */
+  transform: rotate(25deg) scale(1.05); /* Maintains the tilt and pops slightly on hover */
 }
 
 .logo-text {
