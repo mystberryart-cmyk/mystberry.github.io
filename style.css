@@ -66,18 +66,34 @@ header nav a:hover, header nav a.active {
   border-radius: 20px;
 }
 
-/* Hero Banner Section with Translucent Card */
+/* Hero Banner Section with Video Background */
 .hero-banner {
+  position: relative;
   height: 70vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-              url('assets/images/Colorful World.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+  overflow: hidden;
+}
+
+#hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+  filter: brightness(0.65); /* Dims the video slightly so your text pops */
 }
 
 .hero-box {
+  position: relative;
+  z-index: 1; /* Keeps your text box floating cleanly on top of the video */
   background: rgba(15, 23, 42, 0.75); /* Dark translucent navy box */
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
