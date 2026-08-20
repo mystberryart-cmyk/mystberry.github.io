@@ -36,7 +36,7 @@ header {
   height: 35px;
   width: auto;
   position: relative;
-  top: -10px; /* Optically lifts the logo slightly higher than the text */
+  top: -5px; /* Optically lifts the logo slightly higher than the text */
   transform: rotate(25deg); /* Leans 25 degrees towards the text */
   transform-origin: bottom center; /* Wobbles naturally from its base */
   animation: logoWobble 1.2s ease-in-out; /* Plays on page load */
